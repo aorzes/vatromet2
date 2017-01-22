@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "Raketa.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _maxExplosion = 144;
+    CGPoint startPoint = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height);
+    Raketa *r1 = [[Raketa alloc]initWithPosition:startPoint angle:-M_PI_2 view:self];
+    [self.view addSubview:r1];
 }
 
 

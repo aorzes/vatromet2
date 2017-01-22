@@ -13,6 +13,8 @@
 		EC0537C41E34B265004C27B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC0537C21E34B265004C27B1 /* Main.storyboard */; };
 		EC0537C61E34B265004C27B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0537C51E34B265004C27B1 /* Assets.xcassets */; };
 		EC0537C91E34B265004C27B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC0537C71E34B265004C27B1 /* LaunchScreen.storyboard */; };
+		EC0537D21E34B29F004C27B1 /* Raketa.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0537D11E34B29F004C27B1 /* Raketa.m */; };
+		EC0537D51E34B9DF004C27B1 /* Eksplozija.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0537D41E34B9DF004C27B1 /* Eksplozija.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		EC0537C51E34B265004C27B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC0537C81E34B265004C27B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC0537CA1E34B265004C27B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC0537D01E34B29F004C27B1 /* Raketa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Raketa.h; path = ../Raketa.h; sourceTree = "<group>"; };
+		EC0537D11E34B29F004C27B1 /* Raketa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Raketa.m; path = ../Raketa.m; sourceTree = "<group>"; };
+		EC0537D31E34B9DF004C27B1 /* Eksplozija.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eksplozija.h; sourceTree = "<group>"; };
+		EC0537D41E34B9DF004C27B1 /* Eksplozija.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eksplozija.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,10 @@
 			children = (
 				EC0537BC1E34B265004C27B1 /* AppDelegate.h */,
 				EC0537BD1E34B265004C27B1 /* AppDelegate.m */,
+				EC0537D01E34B29F004C27B1 /* Raketa.h */,
+				EC0537D11E34B29F004C27B1 /* Raketa.m */,
+				EC0537D31E34B9DF004C27B1 /* Eksplozija.h */,
+				EC0537D41E34B9DF004C27B1 /* Eksplozija.m */,
 				EC0537BF1E34B265004C27B1 /* ViewController.h */,
 				EC0537C01E34B265004C27B1 /* ViewController.m */,
 				EC0537C21E34B265004C27B1 /* Main.storyboard */,
@@ -153,7 +163,9 @@
 			files = (
 				EC0537C11E34B265004C27B1 /* ViewController.m in Sources */,
 				EC0537BE1E34B265004C27B1 /* AppDelegate.m in Sources */,
+				EC0537D51E34B9DF004C27B1 /* Eksplozija.m in Sources */,
 				EC0537BB1E34B265004C27B1 /* main.m in Sources */,
+				EC0537D21E34B29F004C27B1 /* Raketa.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
