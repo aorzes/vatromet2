@@ -9,18 +9,20 @@
 #import "Raketa.h"
 #import "Eksplozija.h"
 
+extern int maxExplosion;
+
 @interface Raketa()
 {
     CGPoint startPosition;
     CGPoint d; //promjena po x,y
     float maxDistance;
     NSTimer *t;
-    ViewController *mainView;
+    UIView *mainView;
 }
 @end
 
 @implementation Raketa
-- (id)initWithPosition:(CGPoint)position angle:(float)k view:(ViewController *)mv {
+- (id)initWithPosition:(CGPoint)position angle:(float)k view:(UIView *)mv {
     self = [super init];
     const float velocity = 5.0;
     maxDistance = 150;
@@ -46,7 +48,7 @@
     self.center = position;
     float distance = hypotf(position.x-startPosition.x,position.y-startPosition.y);
     if(distance>maxDistance) {
-        if(mainView.maxExplosion-- >0){
+        if(maxExplosion-- >0){
             [Eksplozija initWithView:mainView position:position];
         }
         [t invalidate];

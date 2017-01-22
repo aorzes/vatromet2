@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
+
 
 @interface Raketa : UIView
 
-- (id)initWithPosition:(CGPoint)position angle:(float)k view:(ViewController *)mv;
+- (id)initWithPosition:(CGPoint)position angle:(float)k view:(UIView *)mv;
 
 @end

@@ -7,15 +7,16 @@
 //
 
 #import "Eksplozija.h"
+#import "Raketa.h"
 
 @implementation Eksplozija
 
-+(void)initWithView:(ViewController *)mainView position:(CGPoint)position {
++(void)initWithView:(UIView *)mainView position:(CGPoint)position {
    
     for (int i=0; i<12; i++) {
         float kut = M_PI/6 * (float)i;
         Raketa *r1 = [[Raketa alloc]initWithPosition:position angle:kut view:mainView];
-        [mainView.view addSubview:r1];
+        [mainView addSubview:r1];
     }
     
 }

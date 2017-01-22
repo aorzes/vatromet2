@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "Raketa.h"
-#import "ViewController.h"
+
+
 
 @interface Eksplozija : NSObject
 
-+(void)initWithView:(ViewController *)mainView position:(CGPoint)position;
++(void)initWithView:(UIView *)mainView position:(CGPoint)position;
 
 @end

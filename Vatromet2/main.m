@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
+int maxExplosion;
+
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        maxExplosion = 144;
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

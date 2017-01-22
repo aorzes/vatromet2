@@ -16,9 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _maxExplosion = 144;
     CGPoint startPoint = CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height);
-    Raketa *r1 = [[Raketa alloc]initWithPosition:startPoint angle:-M_PI_2 view:self];
+    Raketa *r1 = [[Raketa alloc]initWithPosition:startPoint angle:-M_PI_2 view:self.view];
     [self.view addSubview:r1];
 }
 

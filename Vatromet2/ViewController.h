@@ -10,7 +10,5 @@
 
 @interface ViewController : UIViewController
 
-@property int maxExplosion;
-
 @end
 
