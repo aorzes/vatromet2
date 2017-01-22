@@ -32,7 +32,7 @@ extern int maxExplosion;
         d.x = cos(k) * velocity;
         d.y = sin(k) * velocity;
         [self makeRocket:position];
-        t = [NSTimer scheduledTimerWithTimeInterval:0.1
+        t = [NSTimer scheduledTimerWithTimeInterval:0.05
                                              target:self
                                            selector:@selector(moveRocket)
                                            userInfo:nil
@@ -46,6 +46,7 @@ extern int maxExplosion;
     position.x += d.x;
     position.y += d.y;
     self.center = position;
+    [self trag:position];
     float distance = hypotf(position.x-startPosition.x,position.y-startPosition.y);
     if(distance>maxDistance) {
         if(maxExplosion-- >0){
@@ -55,6 +56,27 @@ extern int maxExplosion;
         t = nil;
         [self removeFromSuperview];
     }
+
+}
+
+- (void)trag:(CGPoint)position {
+    UIView *redDot = [[UIView alloc]initWithFrame:CGRectMake(position.x, position.y, 5, 5)];
+    redDot.center = position;
+    redDot.backgroundColor = [UIColor redColor];
+    redDot.layer.cornerRadius = 5;
+    redDot.layer.masksToBounds = YES;
+    [mainView addSubview:redDot];
+    [UIView animateWithDuration:0.1f animations:^{
+        [redDot setAlpha:1.0f];
+        } completion:^(BOOL finished) {
+        //fade out
+            [UIView animateWithDuration:1.0f animations:^{
+                [redDot setAlpha:0.0f];
+                } completion:^(BOOL endeded) {
+                    if(endeded) [redDot removeFromSuperview];
+                }];
+    }];
+    
 
 }
 

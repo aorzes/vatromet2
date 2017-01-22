@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-
-
 @interface Eksplozija : NSObject
 
 +(void)initWithView:(UIView *)mainView position:(CGPoint)position;
